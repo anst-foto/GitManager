@@ -1,0 +1,44 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+enum RepositoryVisibilityStatus {
+    PRIVATE,
+    PUBLIC
+}
+
+class Account {
+    + Name : string
+}
+
+RepositoryVisibilityStatus <--* RepositoryInfo
+Account <--* RepositoryInfo
+class RepositoryInfo {
+    + Id : int
+    + NodeId : string
+    + Name : string
+    + Description : string?
+    + Url : Uri
+    + IsPrivate : bool
+    + Visibility : RepositoryVisibilityStatus
+    + Account : Account
+}
+
+RepositoryInfo <-- IRepositoryManager
+RepositoryVisibilityStatus <-- IRepositoryManager
+Account <-- IRepositoryManager
+interface IRepositoryManager {
+    + {abstract} GetAllRepositories(account : Account) : RepositoryInfo[]
+    + {abstract} DeleteRepository(id : int) : bool
+    + {abstract} ChangeVisibility(id : int, visibility : RepositoryVisibilityStatus) : bool
+}
+
+IRepositoryManager <|.. GitHubRepositoryManager
+class GitHubRepositoryManager {
+    - token : string
+    + GitHubRepositoryManager()
+    + GetAllRepositories(account : Account) : RepositoryInfo[]
+    + DeleteRepository(id : int) : bool
+    + ChangeVisibility(id : int, visibility : RepositoryVisibilityStatus) : bool
+}
+
+@enduml
