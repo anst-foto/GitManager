@@ -1,7 +1,7 @@
 
 namespace GitManager.Lib
 {
-    internal class Account
+    public class Account
     {
     }
 }
