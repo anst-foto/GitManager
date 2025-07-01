@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GitManager.Lib\GitManager.Lib.csproj"/>
+    <ProjectReference Include="..\GitManager.Core\GitManager.Core.csproj" />
   </ItemGroup>
 
 </Project>

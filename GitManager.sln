@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager.Lib", "GitManager.Lib\GitManager.Lib.csproj", "{0DDC43CF-3FF2-4257-941A-FDB1D693FA4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager.Core", "GitManager.Core\GitManager.Core.csproj", "{0DDC43CF-3FF2-4257-941A-FDB1D693FA4E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "others", "others", "{34857110-6470-4BDE-93B1-5A4108BF1C75}"
 	ProjectSection(SolutionItems) = preProject
