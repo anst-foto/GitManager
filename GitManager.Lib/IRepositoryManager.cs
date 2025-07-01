@@ -1,7 +1,7 @@
 
 namespace GitManager.Lib
 {
-    internal interface IRepositoryManager
+    public interface IRepositoryManager
     {
         public RepositoryInfo[] GetAllRepositories(Account account);
         public bool DeleteRepository(int id);
