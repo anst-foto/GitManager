@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GitManager.Core
 {
-    public class GitHubRepositoryManager
+    public class GitHubRepositoryManager : IRepositoryManager
     {
         private string token;
         private const string HEADERS_ACCEPT_VALUE = "application/vnd.github+json";
