@@ -18,7 +18,7 @@ namespace GitManager.Core
         {
 
         }
-        public async Task<RepositoryInfo[]> GetAllRepositorieas(Account account)
+        public async Task<RepositoryInfo[]> GetAllRepositories(Account account)
         {
             var http = new HttpClient();
             http.DefaultRequestHeaders.Add("Accept", HEADERS_ACCEPT_VALUE);
@@ -56,11 +56,12 @@ namespace GitManager.Core
         public bool DeleteRepository(int id)
         {
 
+            return false;
         }
 
         public bool ChangeVisibility(int id, RepositoryVisibilityStatus visibility)
         {
-
+            return false;
         }
     }
 }
