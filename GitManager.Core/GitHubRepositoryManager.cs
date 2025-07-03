@@ -1,7 +1,7 @@
 
 namespace GitManager.Core
 {
-    public class GitHubRepositoryManager
+    public class GitHubRepositoryManager : IRepositoryManager
     {
         private string token;
 
